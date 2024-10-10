@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { EVENT } from "./EventListSection";
 import { BookImage } from "lucide-react";
 

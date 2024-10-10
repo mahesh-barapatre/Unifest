@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { UserButton } from "@clerk/nextjs";
-import { Search, SidebarOpen } from "lucide-react";
+import { SidebarOpen } from "lucide-react";
 import React from "react";
 
 function Header({ ToggleSideNav }: any) {
