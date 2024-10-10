@@ -34,8 +34,8 @@ function SideNav() {
       <div className="flex justify-center">
         <Image src={"/logo.svg"} alt="logo" width={120} height={100} />
       </div>
-      <hr className="my-6 border" />
-      <div className="mt-3">
+      <hr className="my-6 border hidden md:block" />
+      <div className="mt-3 flex flex-col">
         {MenuList.map((menu, index) => (
           <Link key={index} href={menu.path}>
             <div

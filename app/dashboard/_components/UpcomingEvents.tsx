@@ -15,7 +15,7 @@ const UpcomingEvents: React.FC<{ eventList?: EVENT[] }> = ({
   return (
     <>
       <h1 className="text-primary text-3xl">Upcoming Events...</h1>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-10">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:p-10 p-4">
         {upcomingEvents?.map((item: EVENT, index: number) => (
           <EventCard key={index} {...item} />
           // <h2>{item.eventName}</h2>

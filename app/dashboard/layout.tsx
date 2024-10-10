@@ -8,13 +8,17 @@ function layout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [sideNavOpen, setSideNavOpen] = useState<boolean>(false);
   return (
     <div className="bg-slate-100 min-h-screen">
-      <div className="md:w-64 hidden md:block fixed">
+      <div
+        className={`${sideNavOpen ? "block" : "hidden"} md:w-64 md:block fixed`}
+      >
         <SideNav />
       </div>
+
       <div className="md:ml-64">
-        <Header />
+        <Header ToggleSideNav={setSideNavOpen} />
         {children}
       </div>
       <div></div>

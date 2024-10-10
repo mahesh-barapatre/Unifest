@@ -7,6 +7,8 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { EVENT } from "../../_components/EventListSection";
+import IsLoading from "../../_components/IsLoading";
+import IsError from "../../_components/IsError";
 
 interface PROPS {
   params: {
@@ -70,14 +72,14 @@ const EventDetailPage = ({ params }: PROPS) => {
     try {
       await axios.delete(`/api/events/${id}`);
       alert("Event deleted successfully");
-      router.push("/dashboard/events"); // Redirect to the event list after deletion
+      window.location.href = "/dashboard/events";
     } catch (error) {
       console.error("Error deleting event", error);
     }
   };
 
-  if (isLoading) return <p>Loading...</p>;
-  if (!event) return <p>Event not found</p>;
+  if (isLoading) return <IsLoading />;
+  if (!event) return <IsError message="NO EVENT FOUND" />;
 
   // Check if the current user is the creator of the event
   const isCreator = true;
