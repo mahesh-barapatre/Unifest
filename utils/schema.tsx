@@ -17,10 +17,3 @@ export const event = pgTable("event", {
   attendees: integer("attendees").default(0),
   createdBy: varchar("createdBy"),
 });
-
-export const User = pgTable("user", {
-  id: serial("id").primaryKey(),
-  email: varchar("email"),
-  userName: varchar("userName"),
-  joinDate: varchar("joinData"),
-});
