@@ -35,7 +35,7 @@ function Dashboard() {
   if (error) return <IsError message={error} />;
 
   return (
-    <div className="p-6">
+    <div className="p-2 sm:p-6">
       <UpcomingEvents eventList={eventList} />
       <AllEvents eventList={eventList} />
     </div>
